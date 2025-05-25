@@ -1,5 +1,9 @@
-function togglePassword() {
-  const passwordInput = document.getElementById("password");
-  const type = passwordInput.type === "password" ? "text" : "password";
-  passwordInput.type = type;
+// Função para mostrar ou esconder a senha
+function verSenha(idCampo) {
+  const campo = document.getElementById(idCampo);
+  if (campo.type === "password") {
+    campo.type = "text";
+  } else {
+    campo.type = "password";
+  }
 }
