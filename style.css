@@ -1,85 +1,38 @@
-body {
+body, html {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-.logo {
-  width: 180px;
-  margin: 20px;
-}
-
-header {
-  background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
+  height: 100%;
 }
 
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1605649486476-7599a3f7c39b?auto=format&fit=crop&w=1470&q=80');
+  background-image: url('https://i.imgur.com/Q6aZlme.jpg'); /* imagem de filmes no fundo */
   background-size: cover;
   background-position: center;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-}
-
-.btn {
-  padding: 10px 20px;
-  background-color: #e50914;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  background-color: #111;
-}
-
-.login-container {
-  background: #222;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
-}
-
-input {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: none;
-  font-size: 16px;
-}
-
-.password-container {
   position: relative;
 }
 
-.toggle-password {
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  background: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.buttons .btn {
+  background-color: #e50914;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 5px;
 }
