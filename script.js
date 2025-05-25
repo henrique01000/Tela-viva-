@@ -1,4 +1,5 @@
-// Script básico para futura interatividade
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Tela Viva carregada com sucesso!");
-});
+function togglePassword() {
+  const passwordInput = document.getElementById("password");
+  const type = passwordInput.type === "password" ? "text" : "password";
+  passwordInput.type = type;
+}
