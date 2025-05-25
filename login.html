@@ -4,21 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Tela Viva</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="login-page">
-  <div class="login-container">
-    <h2>Entrar na Tela Viva</h2>
+<body>
+  <div class="form-container">
+    <h2>Entrar</h2>
     <form>
-      <input type="email" placeholder="Email" required/>
-      <div class="password-container">
-        <input type="password" id="password" placeholder="Senha" required/>
-        <button type="button" onclick="togglePassword()" class="toggle-password">👁️</button>
-      </div>
-      <button type="submit" class="btn">Entrar</button>
+      <input type="email" placeholder="E-mail" required />
+      <input type="password" placeholder="Senha" id="loginSenha" required />
+      <label><input type="checkbox" onclick="verSenha('loginSenha')"> Ver senha</label>
+      <button type="submit">Entrar</button>
     </form>
-    <p>Esqueceu a senha?</p>
   </div>
-  <script src="script.js"></script>
+  <script>
+    function verSenha(id) {
+      const campo = document.getElementById(id);
+      campo.type = campo.type === "password" ? "text" : "password";
+    }
+  </script>
 </body>
 </html>
