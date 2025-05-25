@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastrar - Tela Viva</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastrar</h2>
+    <form>
+      <input type="text" placeholder="Nome completo" required />
+      <input type="email" placeholder="E-mail" required />
+      <input type="password" placeholder="Senha" id="cadastroSenha" required />
+      <label><input type="checkbox" onclick="verSenha('cadastroSenha')"> Ver senha</label>
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+  <script>
+    function verSenha(id) {
+      const campo = document.getElementById(id);
+      campo.type = campo.type === "password" ? "text" : "password";
+    }
+  </script>
+</body>
+</html>
