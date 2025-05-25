@@ -5,21 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Tela Viva</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('https://i.imgur.com/4M7IWwP.jpeg') no-repeat center center/cover;
+    }
+    .login-box {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+      max-width: 350px;
+      width: 100%;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .toggle-password {
+      cursor: pointer;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #e50914;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+    }
+    .login-box a {
+      color: #f40612;
+      text-decoration: none;
+      display: block;
+      margin-top: 15px;
+    }
+    .logo {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Entrar</h2>
-    <form>
+  <div class="login-container">
+    <div class="login-box">
+      <img src="https://i.imgur.com/7sN1X9C.png" alt="Tela Viva Logo" class="logo" />
+      <h2>Entrar</h2>
       <input type="email" placeholder="E-mail" required />
-      <input type="password" placeholder="Senha" id="loginSenha" required />
-      <label><input type="checkbox" onclick="verSenha('loginSenha')"> Ver senha</label>
-      <button type="submit">Entrar</button>
-    </form>
+      <input type="password" placeholder="Senha" id="senha" required />
+      <div class="toggle-password" onclick="verSenha()">👁 Ver senha</div>
+      <button>Entrar</button>
+      <a href="cadastro.html">Não tem uma conta? Cadastre-se</a>
+    </div>
   </div>
+
   <script>
-    function verSenha(id) {
-      const campo = document.getElementById(id);
-      campo.type = campo.type === "password" ? "text" : "password";
+    function verSenha() {
+      const senha = document.getElementById('senha');
+      senha.type = senha.type === 'password' ? 'text' : 'password';
     }
   </script>
 </body>
