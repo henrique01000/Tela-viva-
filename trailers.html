@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela Viva - Trailers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="trailers-page">
+  <header>
+    <h1>Tela Viva</h1>
+    <button onclick="logout()" class="btn logout-btn">Sair</button>
+  </header>
+  <main>
+    <h2>Bem-vindo, <span id="userName"></span>!</h2>
+    <div class="trailers">
+      <!-- Embeds de trailers (exemplos do YouTube) -->
+      <div class="trailer">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/YO2CQG7Gj5g" title="Trailer 1" allowfullscreen></iframe>
+      </div>
+      <div class="trailer">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/EXeTwQWrcwY" title="Trailer 2" allowfullscreen></iframe>
+      </div>
+      <div class="trailer">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Trailer 3" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
