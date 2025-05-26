@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Tela Viva</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form onsubmit="return fazerLogin()">
-      <input type="email" placeholder="E-mail" id="loginEmail" required>
-      <input type="password" placeholder="Senha" id="loginSenha" required>
-      <label><input type="checkbox" onclick="mostrarSenha('loginSenha')"/> Ver senha</label>
-      <button type="submit">Entrar</button>
+<body class="login-page">
+  <div class="form-container">
+    <h2>Entrar</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="E-mail" required />
+      <div class="password-field">
+        <input type="password" id="loginSenha" placeholder="Senha" required />
+        <button type="button" class="toggle-btn" onclick="togglePassword('loginSenha')">👁</button>
+      </div>
+      <button type="submit" class="btn">Entrar</button>
     </form>
-    <a href="index.html" class="voltar">Voltar</a>
+    <p><a href="cadastro.html">Não tem conta? Cadastre-se</a></p>
   </div>
   <script src="script.js"></script>
 </body>
