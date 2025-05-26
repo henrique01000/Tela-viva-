@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - Tela Viva</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="login-container">
-    <h2>Cadastro</h2>
-    <form onsubmit="return cadastrarUsuario()">
-      <input type="email" placeholder="E-mail" id="cadEmail" required>
-      <input type="password" placeholder="Senha" id="cadSenha" minlength="6" required>
-      <label><input type="checkbox" onclick="mostrarSenha('cadSenha')"/> Ver senha</label>
-      <button type="submit">Cadastrar</button>
+<body class="login-page">
+  <div class="form-container">
+    <h2>Cadastrar</h2>
+    <form id="registerForm">
+      <input type="text" id="registerName" placeholder="Nome completo" required />
+      <input type="email" id="registerEmail" placeholder="E-mail" required />
+      <div class="password-field">
+        <input type="password" id="registerSenha" placeholder="Senha (mínimo 6 caracteres)" required minlength="6" />
+        <button type="button" class="toggle-btn" onclick="togglePassword('registerSenha')">👁</button>
+      </div>
+      <button type="submit" class="btn">Cadastrar</button>
     </form>
-    <a href="index.html" class="voltar">Voltar</a>
+    <p><a href="login.html">Já tem conta? Faça login</a></p>
   </div>
   <script src="script.js"></script>
 </body>
