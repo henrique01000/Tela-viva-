@@ -2,18 +2,45 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tela Viva - Início</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tela Viva</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('inicio.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .botao {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #444;
+    }
+  </style>
 </head>
-<body class="home-page">
+<body>
   <div class="container">
-    <h1>Bem-vindo à Tela Viva!</h1>
-    <p>Assista trailers dos melhores filmes e séries.</p>
-    <div class="button-group">
-      <a href="login.html" class="btn">Entrar</a>
-      <a href="cadastro.html" class="btn">Cadastrar</a>
-    </div>
+    <a href="login.html"><button class="botao">Entrar</button></a>
+    <a href="cadastro.html"><button class="botao">Cadastrar-se</button></a>
   </div>
 </body>
 </html>
