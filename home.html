@@ -1,22 +1,53 @@
+<!-- home.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Tela Viva</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-    }
-    img {
-      width: 100%;
-      max-width: 100%;
-      display: block;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela Viva - Início</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <img src="home.jpg" alt="Tela Principal Tela Viva">
+<body class="home-body">
+  <header class="header">
+    <img src="inicio.jpg" alt="Tela Viva Logo" class="logo" />
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#pesquisar">Pesquisar</a>
+      <a href="#filmes">Filmes</a>
+      <a href="#series">Séries</a>
+      <a href="#categorias">Categorias</a>
+      <a href="planos.html" class="btn-assine">Assine Já</a>
+      <a href="#novidades">Novidades</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <section id="inicio">
+      <h2>Lançamentos</h2>
+      <div class="grid-filmes">
+        <img src="home.jpg" alt="Filme Destaque" />
+      </div>
+    </section>
+
+    <section id="filmes">
+      <h2>Filmes</h2>
+      <div class="grid-filmes">
+        <img src="filme1.jpg" alt="Filme 1" />
+        <img src="filme2.jpg" alt="Filme 2" />
+      </div>
+    </section>
+
+    <section id="series">
+      <h2>Séries</h2>
+      <div class="grid-filmes">
+        <img src="serie1.jpg" alt="Série 1" />
+        <img src="serie2.jpg" alt="Série 2" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tela Viva. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
