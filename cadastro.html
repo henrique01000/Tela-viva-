@@ -2,24 +2,76 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cadastro - Tela Viva</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastrar - Tela Viva</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: url('inicio.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .cadastro-box {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 0 10px #000;
+      color: white;
+    }
+
+    .cadastro-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .cadastro-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .cadastro-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .cadastro-box a {
+      display: block;
+      text-align: center;
+      color: #aaa;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    .cadastro-box a:hover {
+      color: white;
+    }
+  </style>
 </head>
-<body class="login-page">
-  <div class="form-container">
+<body>
+  <div class="cadastro-box">
     <h2>Cadastrar</h2>
-    <form id="registerForm">
-      <input type="text" id="registerName" placeholder="Nome completo" required />
-      <input type="email" id="registerEmail" placeholder="E-mail" required />
-      <div class="password-field">
-        <input type="password" id="registerSenha" placeholder="Senha (mínimo 6 caracteres)" required minlength="6" />
-        <button type="button" class="toggle-btn" onclick="togglePassword('registerSenha')">👁</button>
-      </div>
-      <button type="submit" class="btn">Cadastrar</button>
-    </form>
-    <p><a href="login.html">Já tem conta? Faça login</a></p>
+    <input type="text" placeholder="Nome completo" required />
+    <input type="email" placeholder="E-mail" required />
+    <input type="password" placeholder="Senha (mínimo 6 dígitos)" minlength="6" required />
+    <button>Cadastrar</button>
+    <a href="login.html">Já tenho conta. Entrar</a>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
