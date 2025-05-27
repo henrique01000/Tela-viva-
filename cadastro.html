@@ -1,77 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastrar - Tela Viva</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: url('inicio.jpg') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .cadastro-box {
-      background-color: rgba(0, 0, 0, 0.85);
-      padding: 40px;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 380px;
-      box-shadow: 0 0 10px #000;
-      color: white;
-    }
-
-    .cadastro-box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .cadastro-box input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 6px;
-    }
-
-    .cadastro-box button {
-      width: 100%;
-      padding: 12px;
-      background-color: #e50914;
-      border: none;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .cadastro-box a {
-      display: block;
-      text-align: center;
-      color: #aaa;
-      margin-top: 10px;
-      text-decoration: none;
-    }
-
-    .cadastro-box a:hover {
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <div class="cadastro-box">
-    <h2>Cadastrar</h2>
-    <input type="text" placeholder="Nome completo" required />
-    <input type="email" placeholder="E-mail" required />
-    <input type="password" placeholder="Senha (mínimo 6 dígitos)" minlength="6" required />
-    <button>Cadastrar</button>
-    <a href="login.html">Já tenho conta. Entrar</a>
+<body class="cadastro-body">
+  <div class="form-container">
+    <h1>Cadastro - Tela Viva</h1>
+    <form id="cadastro-form">
+      <input type="text" id="nome" placeholder="Nome completo" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="senha" placeholder="Senha (mínimo 6 caracteres)" required minlength="6" />
+      <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required />
+      <button type="button" onclick="togglePassword('senha')">👁 Ver senha</button>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
   </div>
+
+  <script>
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("cadastro-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const senha = document.getElementById("senha").value;
+      const confirmar = document.getElementById("confirmarSenha").value;
+
+      if (senha !== confirmar) {
+        alert("As senhas não coincidem.");
+        return;
+      }
+
+      if (senha.length < 6) {
+        alert("A senha deve ter no mínimo 6 caracteres.");
+        return;
+      }
+
+      alert("Cadastro realizado com sucesso!");
+      // Aqui você faria integração com backend/Firebase
+      window.location.href = "login.html";
+    });
+  </script>
 </body>
 </html>
