@@ -1,46 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tela Viva</title>
+  <meta charset="UTF-8">
+  <title>Entrar no Tela Viva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      background: #222;
       margin: 0;
-      padding: 0;
-      background: url('inicio.jpg') no-repeat center center fixed;
-      background-size: cover;
+      height: 100vh;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: Arial, sans-serif;
     }
-
-    .container {
-      position: absolute;
-      bottom: 50px;
-      width: 100%;
+    .login-box {
+      background: #191919;
+      padding: 36px 28px 32px 28px;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px #0007;
+      width: 95vw;
+      max-width: 380px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .login-box h2 {
       text-align: center;
+      margin-bottom: 26px;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
     }
-
-    .botao {
-      background-color: #000;
-      color: white;
+    .login-box input[type="email"],
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 13px 10px;
+      margin-bottom: 16px;
       border: none;
-      padding: 15px 30px;
-      margin: 10px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 6px;
+      font-size: 1.08rem;
+      outline: none;
+      background: #f8f8c7;
+      color: #222;
+      transition: background 0.2s;
     }
-
-    .botao:hover {
-      background-color: #444;
+    .login-box input[type="password"] {
+      background: #fff;
+    }
+    .login-box .show-password-btn {
+      width: 100%;
+      background: #e50914;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      padding: 11px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-box .show-password-btn:hover {
+      background: #b00610;
+    }
+    .login-box .login-btn {
+      width: 100%;
+      background: #e50914;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.17rem;
+      font-weight: bold;
+      margin-bottom: 14px;
+      padding: 13px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-box .login-btn:hover {
+      background: #b00610;
+    }
+    .login-box .forgot {
+      color: #e50914;
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+      text-decoration: none;
+      display: block;
+    }
+    .login-box .signup {
+      text-align: center;
+      color: #fff;
+      margin-top: 6px;
+      font-size: 1.01rem;
+    }
+    .login-box .signup a {
+      color: #e50914;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-box .signup a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 420px) {
+      .login-box {
+        padding: 26px 5vw 22px 5vw;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="login.html"><button class="botao">Entrar</button></a>
-    <a href="cadastro.html"><button class="botao">Cadastrar-se</button></a>
-  </div>
+  <form class="login-box">
+    <h2>Entrar no Tela Viva</h2>
+    <input type="email" placeholder="Email" value="Ofasaliba@gmail.com" required>
+    <input type="password" placeholder="Senha" id="senha" required>
+    <button type="button" class="show-password-btn" onclick="mostrarSenha()">
+      <span id="eye">&#128065;</span> Ver senha
+    </button>
+    <button type="submit" class="login-btn">Entrar</button>
+    <a href="#" class="forgot">Esqueci minha senha</a>
+    <div class="signup">
+      Não tem uma conta? <a href="#">Cadastrar-se</a>
+    </div>
+  </form>
+  <script>
+    function mostrarSenha() {
+      const senha = document.getElementById('senha');
+      if (senha.type === "password") {
+        senha.type = "text";
+      } else {
+        senha.type = "password";
+      }
+    }
+  </script>
 </body>
 </html>
