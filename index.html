@@ -13,13 +13,14 @@
     }
     body {
       min-height: 100vh;
+      min-width: 100vw;
       width: 100vw;
-      margin: 0;
+      height: 100vh;
+      background: #222;
+      font-family: Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #222;
-      font-family: Arial, sans-serif;
     }
     .login-box {
       background: #191919;
@@ -122,7 +123,7 @@
   </style>
 </head>
 <body>
-  <form class="login-box">
+  <form class="login-box" id="loginForm">
     <h2>Entrar no Tela Viva</h2>
     <input type="email" placeholder="Email" required>
     <input type="password" placeholder="Senha" id="senha" required>
@@ -140,6 +141,12 @@
       const senha = document.getElementById('senha');
       senha.type = senha.type === "password" ? "text" : "password";
     }
+    // Redireciona para home.html após login
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Aqui você pode validar o login se quiser antes do redirecionamento
+      window.location.href = "home.html"; // Troque para o nome correto da sua página inicial
+    });
   </script>
 </body>
 </html>
