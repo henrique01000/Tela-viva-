@@ -40,6 +40,14 @@
       }
     }
   </script>
+  <script>
+  document.querySelector('.login-box').addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
+    // Aqui você faria a checagem de login (autenticação)
+    // Se o login for bem-sucedido, redirecione:
+    window.location.href = "home.html"; // Troque para o caminho da sua tela principal
+  });
+</script>
 </body>
 </html>
 <p><a href="recuperar.html">Esqueceu a senha?</a></p>
