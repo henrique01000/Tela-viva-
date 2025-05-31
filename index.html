@@ -4,123 +4,7 @@
   <meta charset="UTF-8">
   <title>Entrar no Tela Viva</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
-    body {
-      min-height: 100vh;
-      min-width: 100vw;
-      width: 100vw;
-      height: 100vh;
-      background: #222;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .login-box {
-      background: #191919;
-      padding: 36px 28px 32px 28px;
-      border-radius: 20px;
-      box-shadow: 0 4px 24px #0007;
-      width: 95vw;
-      max-width: 380px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-    .login-box h2 {
-      text-align: center;
-      margin-bottom: 26px;
-      color: #fff;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    .login-box input[type="email"],
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
-      width: 100%;
-      padding: 13px 10px;
-      margin-bottom: 16px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.08rem;
-      outline: none;
-      background: #f8f8c7;
-      color: #222;
-      transition: background 0.2s;
-    }
-    .login-box input[type="password"] {
-      background: #fff;
-    }
-    .login-box .show-password-btn {
-      width: 100%;
-      background: #e50914;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      margin-bottom: 14px;
-      padding: 11px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .login-box .show-password-btn:hover {
-      background: #b00610;
-    }
-    .login-box .login-btn {
-      width: 100%;
-      background: #e50914;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.17rem;
-      font-weight: bold;
-      margin-bottom: 14px;
-      padding: 13px 0;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .login-box .login-btn:hover {
-      background: #b00610;
-    }
-    .login-box .forgot {
-      color: #e50914;
-      text-align: center;
-      margin-bottom: 8px;
-      font-size: 0.98rem;
-      text-decoration: none;
-      display: block;
-    }
-    .login-box .signup {
-      text-align: center;
-      color: #fff;
-      margin-top: 6px;
-      font-size: 1.01rem;
-    }
-    .login-box .signup a {
-      color: #e50914;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .login-box .signup a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 420px) {
-      .login-box {
-        padding: 26px 5vw 22px 5vw;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form class="login-box" id="loginForm">
@@ -144,8 +28,7 @@
     // Redireciona para home.html após login
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      // Aqui você pode validar o login se quiser antes do redirecionamento
-      window.location.href = "home.html"; // Troque para o nome correto da sua página inicial
+      window.location.href = "home.html";
     });
   </script>
 </body>
