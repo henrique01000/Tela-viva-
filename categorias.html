@@ -4,6 +4,55 @@
   <meta charset="UTF-8">
   <title>Tela Viva - Categorias</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .categorias-container {
+      max-width: 900px;
+      margin: 38px auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 32px;
+      justify-content: center;
+    }
+    .categoria-card {
+      background: #191919;
+      border-radius: 14px;
+      padding: 32px 32px 22px 32px;
+      min-width: 170px;
+      min-height: 130px;
+      text-align: center;
+      box-shadow: 0 2px 18px #0006;
+      transition: transform 0.16s, box-shadow 0.16s;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.16rem;
+      font-weight: bold;
+      border: 2px solid transparent;
+    }
+    .categoria-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px #e5091444;
+      border-color: #e50914;
+      color: #e50914;
+    }
+    .categoria-icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    @media (max-width: 700px) {
+      .categorias-container {
+        gap: 12px 5vw;
+      }
+      .categoria-card {
+        min-width: 110px;
+        padding: 20px 9vw 12px 9vw;
+        font-size: 1.02rem;
+      }
+      .categoria-icon {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -20,16 +69,43 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h2>Categorias de Filmes e Séries</h2>
-        <div class="linha-filmes" style="flex-wrap:wrap;">
-          <div style="margin:10px;text-align:center;">
-            <img src="https://img.icons8.com/color/96/000000/clapperboard.png" alt="Ação">
-            <div>Ação</div>
-          </div>
-          <div style="margin:10px;text-align:center;">
-            <img src="https://img.icons8.com/color/96/000000/horror.png" alt="Terror">
-            <div>Terror</div>
-          </div>
-          <div style="margin:10px;text-align:center;">
-            <img src="https://img.icons8.com/color
+      <h2 style="margin-top:32px;text-align:center;">Categorias</h2>
+      <div class="categorias-container">
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=acao'">
+          <span class="categoria-icon">🎬</span>Ação
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=aventura'">
+          <span class="categoria-icon">🏞️</span>Aventura
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=comedia'">
+          <span class="categoria-icon">😂</span>Comédia
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=drama'">
+          <span class="categoria-icon">🎭</span>Drama
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=romance'">
+          <span class="categoria-icon">❤️</span>Romance
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=suspense'">
+          <span class="categoria-icon">🕵️‍♂️</span>Suspense
+        </div>
+        <div class="categoria-card" onclick="window.location.href='filmes.html?cat=terror'">
+          <span class="categoria-icon">👻</span>Terror
+        </div>
+        <div class="categoria-card" onclick="window.location.href='series.html?cat=infantil'">
+          <span class="categoria-icon">🧸</span>Infantil
+        </div>
+        <div class="categoria-card" onclick="window.location.href='series.html?cat=documentario'">
+          <span class="categoria-icon">🎥</span>Documentário
+        </div>
+        <div class="categoria-card" onclick="window.location.href='series.html?cat=ficcao'">
+          <span class="categoria-icon">🚀</span>Ficção Científica
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>© 2025 Tela Viva. Todos os direitos reservados.</span>
+    </footer>
+  </div>
+</body>
+</html>
