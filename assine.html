@@ -1,1 +1,122 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Assine Já - Tela Viva</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .plano-box {
+      background: #191919;
+      border-radius: 18px;
+      padding: 32px 30px 24px 30px;
+      margin: 32px auto 24px auto;
+      max-width: 420px;
+      box-shadow: 0 3px 24px #0008;
+      text-align: center;
+    }
+    .plano-box h2 {
+      color: #e50914;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .plano-preco {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: bold;
+      margin: 8px 0 18px 0;
+    }
+    .plano-info {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+    .plano-imagem {
+      width: 80px;
+      margin-bottom: 18px;
+    }
+    .btn-pagar {
+      background: #08a55b;
+      color: #fff;
+      font-size: 1.08rem;
+      border: none;
+      border-radius: 8px;
+      padding: 15px 35px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 14px;
+      transition: background 0.2s;
+      box-shadow: 0 2px 12px #08a55b55;
+    }
+    .btn-pagar:hover {
+      background: #04914d;
+    }
+    .status-msg {
+      margin-top: 18px;
+      color: #e50914;
+      font-size: 1.09rem;
+      font-weight: bold;
+      min-height: 32px;
+    }
+    .acesso-liberado {
+      color: #08a55b;
+      font-size: 1.18rem;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Tela Viva Logo" class="logo">
+      <nav>
+        <button class="nav-btn" onclick="window.location.href='home.html'">Início</button>
+        <button class="nav-btn" onclick="window.location.href='pesquisar.html'">Pesquisar</button>
+        <button class="nav-btn" onclick="window.location.href='filmes.html'">Filmes</button>
+        <button class="nav-btn" onclick="window.location.href='series.html'">Séries</button>
+        <button class="nav-btn" onclick="window.location.href='categorias.html'">Categorias</button>
+        <button class="nav-btn destaque" onclick="window.location.href='assine.html'">Assine Já</button>
+        <button class="nav-btn" onclick="window.location.href='novidades.html'">Novidades</button>
+      </nav>
+    </header>
+    <main>
+      <div class="plano-box">
+        <h2>Plano Mensal</h2>
+        <img src="https://img.icons8.com/?size=100&id=33677&format=png" class="plano-imagem" alt="Ultra 4K">
+        <div class="plano-preco">R$ 17,90</div>
+        <div class="plano-info">
+          - Imagem Ultra 4K<br>
+          - Filmes e séries ilimitados<br>
+          - Acesso imediato após aprovação
+        </div>
+        <button class="btn-pagar" id="btnPagar">
+          Assinar com Mercado Pago
+        </button>
+        <div class="status-msg" id="statusMsg"></div>
+        <div class="acesso-liberado" id="acessoLiberado" style="display:none;">
+          Parabéns! Seu acesso foi liberado.<br>
+          <a href="filmes.html" style="color:#08a55b;text-decoration:underline;">Ir para Filmes</a> |
+          <a href="series.html" style="color:#08a55b;text-decoration:underline;">Ir para Séries</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>© 2025 Tela Viva. Todos os direitos reservados.</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('btnPagar').onclick = function() {
+      window.open('https://mpago.la/1faMnE8', '_blank');
+      document.getElementById('statusMsg').textContent = 'Aguardando confirmação do pagamento...';
+      // Simulação da análise automática e liberação após "pagamento" (apenas para protótipo)
+      setTimeout(function() {
+        document.getElementById('statusMsg').textContent = 'Pagamento aprovado! Analisando...';
+        setTimeout(function() {
+          document.getElementById('statusMsg').textContent = '';
+          document.getElementById('acessoLiberado').style.display = 'block';
+        }, 1800);
+      }, 4000);
+    };
+  </script>
+</body>
+</html>
