@@ -10,47 +10,31 @@
     <header>
       <img src="logo.png" alt="Tela Viva Logo" class="logo">
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Pesquisar</a>
-        <a href="#">Filmes</a>
-        <a href="#">Séries</a>
-        <a href="#">Categorias</a>
-        <a href="#">Assine Já</a>
-        <a href="#">Novidades</a>
+        <button class="nav-btn" onclick="inicio()">Início</button>
+        <button class="nav-btn" onclick="pesquisar()">Pesquisar</button>
+        <button class="nav-btn" onclick="filmes()">Filmes</button>
+        <button class="nav-btn" onclick="series()">Séries</button>
+        <button class="nav-btn" onclick="categorias()">Categorias</button>
+        <button class="nav-btn destaque" onclick="assineJa()">Assine Já</button>
+        <button class="nav-btn" onclick="novidades()">Novidades</button>
       </nav>
     </header>
 
     <main>
-      <section class="destaque">
-        <h2>Lançamentos</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Filme Destaque">
-        </div>
-      </section>
-      <section>
-        <h2>Filmes</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Filme 1">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Filme 2">
-        </div>
-      </section>
-      <section>
-        <h2>Seus Favoritos</h2>
-      </section>
-      <section>
-        <h2>Continuar Assistindo</h2>
-      </section>
-      <section>
-        <h2>Séries</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Série 1">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Série 2">
-        </div>
-      </section>
+      <!-- Seu conteúdo aqui -->
     </main>
     <footer>
       <span>© 2025 Tela Viva. Todos os direitos reservados.</span>
     </footer>
   </div>
+  <script>
+    function inicio()      { alert('Início!'); }
+    function pesquisar()   { alert('Pesquisar!'); }
+    function filmes()      { alert('Filmes!'); }
+    function series()      { alert('Séries!'); }
+    function categorias()  { alert('Categorias!'); }
+    function assineJa()    { alert('Assine Já!'); }
+    function novidades()   { alert('Novidades!'); }
+  </script>
 </body>
 </html>
