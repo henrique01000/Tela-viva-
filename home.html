@@ -4,6 +4,60 @@
   <meta charset="UTF-8">
   <title>Tela Viva - Início</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .linha-filmes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-top: 32px;
+    }
+    .filme-card {
+      background: #191919;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0005;
+      padding: 22px 16px 16px 16px;
+      max-width: 290px;
+      min-width: 230px;
+      text-align: center;
+      color: #fff;
+    }
+    .filme-card img {
+      max-width: 180px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 8px #0008;
+    }
+    .filme-card h3 {
+      margin: 12px 0 6px 0;
+      font-size: 1.14rem;
+      color: #e50914;
+    }
+    .filme-card p {
+      font-size: 0.98rem;
+      color: #ddd;
+      min-height: 48px;
+    }
+    .filme-card .trailer-btn {
+      display: inline-block;
+      background: #e50914;
+      color: #fff;
+      padding: 7px 22px;
+      border-radius: 5px;
+      margin: 9px 0 10px 0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .filme-card .trailer-btn:hover {
+      background: #b00610;
+    }
+    .filme-card video {
+      width: 100%;
+      margin-top: 12px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -19,41 +73,54 @@
         <button class="nav-btn" onclick="window.location.href='novidades.html'">Novidades</button>
       </nav>
     </header>
-
     <main>
-      <section class="destaque">
-        <h2>Lançamentos</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Filme Destaque">
+      <h2 style="text-align:center; margin-top:28px;">Destaques em Filmes Domínio Público</h2>
+      <div class="linha-filmes">
+        <!-- FILME 1 -->
+        <div class="filme-card">
+          <img src="https://m.media-amazon.com/images/I/81BESw2OQkL._AC_SY679_.jpg" alt="Night of the Living Dead">
+          <h3>Night of the Living Dead (1968)</h3>
+          <p>Um clássico do terror dirigido por George A. Romero. Zumbis aterrorizam uma fazenda na Pensilvânia.</p>
+          <a class="trailer-btn" href="https://www.youtube.com/watch?v=vZy6P72Uu3Y" target="_blank">Ver Trailer</a>
+          <video controls poster="https://m.media-amazon.com/images/I/81BESw2OQkL._AC_SY679_.jpg">
+            <source src="https://archive.org/download/night_of_the_living_dead/night_of_the_living_dead_512kb.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
         </div>
-      </section>
-      <section>
-        <h2>Filmes</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Filme 1">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="Filme 2">
+        <!-- FILME 2 -->
+        <div class="filme-card">
+          <img src="https://m.media-amazon.com/images/I/81QF6i1sOsL._AC_SY679_.jpg" alt="Plan 9 from Outer Space">
+          <h3>Plan 9 from Outer Space (1959)</h3>
+          <p>Extraterrestres ressuscitam mortos em um dos filmes mais cultuados de Ed Wood.</p>
+          <a class="trailer-btn" href="https://www.youtube.com/watch?v=5E6dF3PqS2A" target="_blank">Ver Trailer</a>
+          <video controls poster="https://m.media-amazon.com/images/I/81QF6i1sOsL._AC_SY679_.jpg">
+            <source src="https://archive.org/download/Plan_9_from_Outer_Space/Plan_9_from_Outer_Space_512kb.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
         </div>
-      </section>
-      <section>
-        <h2>Seus Favoritos</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Favorito 1">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Favorito 2">
+        <!-- FILME 3 -->
+        <div class="filme-card">
+          <img src="https://m.media-amazon.com/images/I/71Hk77rDlGL._AC_SY679_.jpg" alt="Metropolis">
+          <h3>Metropolis (1927)</h3>
+          <p>Obra-prima alemã de ficção científica dirigida por Fritz Lang, um marco do cinema mudo.</p>
+          <a class="trailer-btn" href="https://www.youtube.com/watch?v=ZSExdX0tds4" target="_blank">Ver Trailer</a>
+          <video controls poster="https://m.media-amazon.com/images/I/71Hk77rDlGL._AC_SY679_.jpg">
+            <source src="https://archive.org/download/Metropolis1927/Metropolis1927_512kb.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
         </div>
-      </section>
-      <section>
-        <h2>Continuar Assistindo</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg" alt="Assistindo 1">
+        <!-- FILME 4 -->
+        <div class="filme-card">
+          <img src="https://m.media-amazon.com/images/I/91NIA+OQ0zL._AC_SY679_.jpg" alt="Tempos Modernos">
+          <h3>Tempos Modernos (1936)</h3>
+          <p>O clássico de Charlie Chaplin sobre a vida de um operário na era industrial.</p>
+          <a class="trailer-btn" href="https://www.youtube.com/watch?v=GLeDdzGUTq0" target="_blank">Ver Trailer</a>
+          <video controls poster="https://m.media-amazon.com/images/I/91NIA+OQ0zL._AC_SY679_.jpg">
+            <source src="https://archive.org/download/charlie_chaplin_modern_times/charlie_chaplin_modern_times.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+          </video>
         </div>
-      </section>
-      <section>
-        <h2>Séries</h2>
-        <div class="linha-filmes">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2CAL2433ZeIihfX1Hb2139CX0pW.jpg" alt="Série 1">
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg" alt="Série 2">
-        </div>
-      </section>
+      </div>
     </main>
     <footer>
       <span>© 2025 Tela Viva. Todos os direitos reservados.</span>
